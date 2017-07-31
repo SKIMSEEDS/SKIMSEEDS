@@ -1,7 +1,6 @@
 
 <html>
-	from django.conf import settings
-	from django.conf.urls.static import static
+	
 	    <head>
 		<title>SEEDS</title>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -11,7 +10,9 @@
 		<img href="//Social_Button_BG.png">
 		<img href="//Political_Button_BG.png">
 		<img href="//Enviornmental_Button_BG.png">
-
+		from django.conf import settings
+		from django.conf.urls.static import static
+		{% load static %}
 	    </head>
 	    <body>
 		    <div class="page-header">
