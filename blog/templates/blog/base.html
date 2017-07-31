@@ -1,77 +1,80 @@
-{% load staticfiles %}
-<html>
-    <head>
-        <title>SEEDS</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Questrial" rel="stylesheet">
-        <img href="//Social_Button_BG.png">
-        <img href="//Political_Button_BG.png">
-        <img href="//Enviornmental_Button_BG.png">
-        
-    </head>
-    <body>
-	    <div class="page-header">
+{% extends my-first-blog %}
+{% block content %}
+	{% load staticfiles %}
+	<html>
+	    <head>
+		<title>SEEDS</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link href="https://fonts.googleapis.com/css?family=Lato|Questrial" rel="stylesheet">
+		<img href="//Social_Button_BG.png">
+		<img href="//Political_Button_BG.png">
+		<img href="//Enviornmental_Button_BG.png">
 
-		    {% if user.is_authenticated %}
-			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-			<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-			<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-			<h1><a href="/">SEEDS Blog</a></h1>
-		    {% else %}
-			<a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-		    {% endif %}
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <div class="w3-content w3-display-container">
-		  <img class="mySlides" src="Current Event 1.png" style="width:100%">
-		  <img class="mySlides" src="Current Event 2.png" style="width:100%">
-		</div>
+	    </head>
+	    <body>
+		    <div class="page-header">
 
-		<script>
-		var myIndex = 0;
-		carousel();
+			    {% if user.is_authenticated %}
+				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+				<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+				<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+				<h1><a href="/">SEEDS Blog</a></h1>
+			    {% else %}
+				<a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+			    {% endif %}
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+		    <div class="w3-content w3-display-container">
+			  <img class="mySlides" src="Current Event 1.png" style="width:100%">
+			  <img class="mySlides" src="Current Event 2.png" style="width:100%">
+			</div>
 
-		function carousel() {
-			var i;
-			var x = document.getElementsByClassName("mySlides");
-			for (i = 0; i < x.length; i++) {
-			   x[i].style.display = "none";  
+			<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 5000); // Change image every 2 seconds
 			}
-			myIndex++;
-			if (myIndex > x.length) {myIndex = 1}    
-			x[myIndex-1].style.display = "block";  
-			setTimeout(carousel, 5000); // Change image every 2 seconds
-		}
-		</script>
-		</div>
-	    <div class = "pol">
-		<h2><a href="politicalhome.html">Political</a></h2>
-	    </div>
-	    <br>
-	    <br>
-	    <div class="soc">
-	      <h3><a href="socialhomepage.html">Social</a></h3>
-	    </div>
-	    <br>
-	    <br>
-	    <div class="env">
-		<h4><a href="environmentalhome.html">Environmental</a></h4>
-	    </div>
-	    <br>
-	    <br>
-	    <br>
-	    <div class="bottom">
-		<p>About Us</p>
-		<br>
-		<p>Contact Us</p>
-		<br>
-		<p>Make a Suggestion</p>
-		<img src="SeedsLogo.png" width="0" height="1">
-		<p>2017</p>
-	    </div>
-    </body>
-</html>
+			</script>
+			</div>
+		    <div class = "pol">
+			<h2><a href="politicalhome.html">Political</a></h2>
+		    </div>
+		    <br>
+		    <br>
+		    <div class="soc">
+		      <h3><a href="socialhomepage.html">Social</a></h3>
+		    </div>
+		    <br>
+		    <br>
+		    <div class="env">
+			<h4><a href="environmentalhome.html">Environmental</a></h4>
+		    </div>
+		    <br>
+		    <br>
+		    <br>
+		    <div class="bottom">
+			<p>About Us</p>
+			<br>
+			<p>Contact Us</p>
+			<br>
+			<p>Make a Suggestion</p>
+			<img src="SeedsLogo.png" width="0" height="1">
+			<p>2017</p>
+		    </div>
+	    </body>
+	</html>
+{% endblock %}
