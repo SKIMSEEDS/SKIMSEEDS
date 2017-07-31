@@ -26,8 +26,27 @@
 	    <br>
 	    <br>
 	    <br>
-	    <div class="container">
-			<img src="trolltunga.jpg" alt="Norway" width="1000" height="300">
+	    <div class="w3-content w3-display-container">
+		  <img class="mySlides" src="Current Event 1.png" style="width:100%">
+		  <img class="mySlides" src="Current Event 2.png" style="width:100%">
+		</div>
+
+		<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 5000); // Change image every 2 seconds
+		}
+		</script>
 		</div>
 	    <div class = "pol">
 		<h2><a href="/">Political</a></h2>
