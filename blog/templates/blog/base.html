@@ -12,47 +12,47 @@
         
     </head>
     <body>
-        <div class="page-header">
+	    <div class="page-header">
 
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-                <h1><a href="/">SEEDS Blog</a></h1>
-            {% else %}
-                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-            {% endif %}
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="container">
-  		<img src="trolltunga.jpg" alt="Norway" width="1000" height="300">
-	</div>
-    <div class = "pol">
-        <h2><a href="/">Political</a></h2>
-    </div>
-    <br>
-    <br>
-    <div class="soc">
-      <h3><a href="/">Social</a></h3>
-    </div>
-    <br>
-    <br>
-    <div class="env">
-        <h4><a href="environmentalhome.html">Environmental</a></h4>
-    </div>
-    <br>
-    <br>
-    <br>
-    <div class="bottom">
-    	<p>About Us</p>
-    	<br>
-    	<p>Contact Us</p>
-    	<br>
-    	<p>Make a Suggestion</p>
-    	<img src="SeedsLogo.png" width="0" height="1">
-    	<p>2017</p>
-    </div>
+		    {% if user.is_authenticated %}
+			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+			<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+			<h1><a href="/">SEEDS Blog</a></h1>
+		    {% else %}
+			<a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+		    {% endif %}
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <div class="container">
+			<img src="trolltunga.jpg" alt="Norway" width="1000" height="300">
+		</div>
+	    <div class = "pol">
+		<h2><a href="/">Political</a></h2>
+	    </div>
+	    <br>
+	    <br>
+	    <div class="soc">
+	      <h3><a href="/">Social</a></h3>
+	    </div>
+	    <br>
+	    <br>
+	    <div class="env">
+		<h4><a href="environmentalhome.html">Environmental</a></h4>
+	    </div>
+	    <br>
+	    <br>
+	    <br>
+	    <div class="bottom">
+		<p>About Us</p>
+		<br>
+		<p>Contact Us</p>
+		<br>
+		<p>Make a Suggestion</p>
+		<img src="SeedsLogo.png" width="0" height="1">
+		<p>2017</p>
+	    </div>
     </body>
 </html>
