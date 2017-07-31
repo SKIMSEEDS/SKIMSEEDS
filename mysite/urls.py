@@ -26,5 +26,5 @@ urlpatterns = [
 ]
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+    'my-first-blog/blog/static/css/blog.css',
 ]
