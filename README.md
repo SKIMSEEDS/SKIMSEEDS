@@ -1,4 +1,4 @@
-{% extends 'blog/'README.md' %}
+
 
 {% block content %}
 
