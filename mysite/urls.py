@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'', include('blog.urls')),
+    url(r'^blog/', include('blog.urls')),
 ]
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
