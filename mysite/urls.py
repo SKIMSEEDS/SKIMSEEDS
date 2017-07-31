@@ -28,3 +28,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     'my-first-blog/blog/static/css/blog.css',
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
