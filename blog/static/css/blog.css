@@ -84,7 +84,7 @@ h1 a {
             padding: 75px;
             margin: 50px;
           }
-		  .bottom {
+	  .bottom {
             background-color: #2D797F;
             margin-bottom: -50px;
             margin-left: -15px;
@@ -92,3 +92,4 @@ h1 a {
             padding: 5px 0px 0px 600px;
 	    color: white;
 	    text-align: center;
+	  }
