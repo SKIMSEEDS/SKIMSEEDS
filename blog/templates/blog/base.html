@@ -1,4 +1,6 @@
-
+from django.conf import settings
+from django.conf.urls.static import static
+{% load static %}
 <html>
 	
 	    <head>
@@ -10,9 +12,7 @@
 		<img href="//Social_Button_BG.png">
 		<img href="//Political_Button_BG.png">
 		<img href="//Enviornmental_Button_BG.png">
-		from django.conf import settings
-		from django.conf.urls.static import static
-		{% load static %}
+		
 	    </head>
 	    <body>
 		    <div class="page-header">
