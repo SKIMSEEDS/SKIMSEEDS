@@ -1,6 +1,1 @@
-
-
-{% block content %}
-
-
-{% endblock %}
+README
